@@ -11,7 +11,7 @@
 ```
 
 Luasnip is a snippet-engine written entirely in lua. It has some great
-atures like inserting text (`luasnip-function-node`) or nodes
+tures like inserting text (`luasnip-function-node`) or nodes
 (`luasnip-dynamic-node`) based on user input, parsing LSP syntax and switching
 nodes (`luasnip-choice-node`).
 For basic setup like mappings and installing, check the README.
