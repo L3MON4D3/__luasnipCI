@@ -39,7 +39,6 @@ describe("snippets_basic", function()
 		-- screen already is in correct state, set `unchanged`.
 		screen:expect({
 			grid = [[
-			the snippet expands^                               |
 			{0:~                                                 }|
 			{2:-- INSERT --}                                      |]],
 			unchanged = true,
