@@ -45,7 +45,6 @@ describe("add_snippets", function()
 		-- snippets from second call expands.
 		screen:expect({
 			grid = [[
-			eeeee^                                             |
 			{0:~                                                 }|
 			{2:-- INSERT --}                                      |]],
 		})
