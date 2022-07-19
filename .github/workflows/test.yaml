@@ -1,6 +1,6 @@
 name: Run tests
 
-on: pull_request_target
+on: push
 
 jobs:
   tests:
@@ -43,4 +43,4 @@ jobs:
           pkg-config
 
 
-      - run: make test
+      - run: make jsregexp
