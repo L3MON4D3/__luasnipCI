@@ -19,6 +19,8 @@ jobs:
         with:
           vimdoc: luasnip
           pandoc: DOC.md
+      - run:
+          nvim +"helptags doc"
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
