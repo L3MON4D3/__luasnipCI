@@ -15,6 +15,7 @@ jobs:
       - run: |
           sudo add-apt-repository ppa:neovim-ppa/stable
           sudo apt-get update
+          sudo apt-get remove libuv1
           sudo apt-get install -y \
           autoconf \
           automake \
