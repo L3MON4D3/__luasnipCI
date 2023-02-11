@@ -10,37 +10,25 @@ jobs:
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
-      # straight from neovim-CI.
+      # straight from neovim-CI,
+      # https://github.com/neovim/neovim/blob/3a5dddf24f9d4d8959194b0cd3c6a7dd0cbd73ae/.github/workflows/ci.yml#L127
       - run: |
           sudo add-apt-repository ppa:neovim-ppa/stable
           sudo apt-get update
+          sudo apt-get remove libuv1
           sudo apt-get install -y \
           autoconf \
           automake \
           build-essential \
-          ccache \
           cmake \
-          flake8 \
+          cpanminus \
+          curl \
           gettext \
-          libluajit-5.1-dev \
-          libmsgpack-dev \
-          libtermkey-dev \
           libtool-bin \
-          libtree-sitter-dev \
-          libunibilium-dev \
-          libuv1-dev \
-          locales \
-          lua-busted \
-          lua-check \
-          lua-filesystem \
-          lua-inspect \
-          lua-lpeg \
-          lua-luv-dev \
-          lua-nvim \
-          luajit \
+          locales-all \
           ninja-build \
           pkg-config \
-          liblua5.1-0-dev
+          unzip
 
 
       - run: make test
