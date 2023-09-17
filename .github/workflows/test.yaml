@@ -42,3 +42,4 @@ jobs:
       # actually know that we'll build with luajit, and not lua, and can just
       # set it manually.
       - run: make test LUAJIT=LuaJIT
+
