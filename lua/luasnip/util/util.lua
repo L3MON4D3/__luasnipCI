@@ -409,6 +409,14 @@ local function pos_offset(base_pos, pos)
 	return {row_offset, row_offset == 0 and pos[2] - base_pos[2] or pos[2]}
 end
 
+-- compute offset of `pos` into multiline string starting at `base_pos`.
+-- This is different from pos_sub because here the column-offset starts at zero
+-- when `pos` is on a line different from `base_pos`.
+-- Assumption: `pos` occurs after `base_pos`.
+local function pos_from_offset(base_pos, offset)
+	return {base_pos[1]+offset[1], offset[1] == 0 and base_pos[2] + offset[2] or offset[2]}
+end
+
 local function shallow_copy(t)
 	if type(t) == "table" then
 		local res = {}
@@ -462,5 +470,6 @@ return {
 	validate = validate,
 	str_utf32index = str_utf32index,
 	pos_offset = pos_offset,
+	pos_from_offset = pos_from_offset,
 	shallow_copy = shallow_copy
 }
