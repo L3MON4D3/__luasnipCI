@@ -31,6 +31,12 @@
             (aspellWithDicts (dicts: with dicts; [en]))
             bashInteractive
             gnumake
+            nix
+            gcc
+            git
+            # for makefile.
+            which
+            gnugrep
           ];
         };
         test_nvim_07 = nvim_07.outputs.devShell.${pkgs-treesitter.system}.overrideAttrs(attrs: {
