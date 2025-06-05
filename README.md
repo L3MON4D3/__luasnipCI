@@ -19,6 +19,8 @@ https://user-images.githubusercontent.com/41961280/122515860-5179fa00-d00e-11eb-
 - Snippet history (jump back into older snippets)
 - Resolve filetype at the cursor using Treesitter
 
+
+
 # Drawbacks
 - Snippets that make use of the entire functionality of this plugin have to be defined in Lua (but 95% of snippets can be written in LSP-syntax).
 
