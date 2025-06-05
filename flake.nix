@@ -32,6 +32,8 @@
           packages = with pkgs-treesitter; [
             (aspellWithDicts (dicts: with dicts; [en]))
             gnumake
+            nix
+            gcc
             git
           ];
         };

@@ -11,5 +11,4 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
       - uses: nixbuild/nix-quick-install-action@v30
-      - run: nix develop -i
-      - run: make test_nix
+      - run: nix develop -i -c bash -c 'make CC=$CC test_nix'
