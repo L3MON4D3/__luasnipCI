@@ -2,7 +2,6 @@
 # LuaSnip
 https://user-images.githubusercontent.com/41961280/122515860-5179fa00-d00e-11eb-91f7-331893f61fbf.mp4
 
-
 # Features
 - Tabstops
 - Text-Transformations using Lua functions
@@ -19,6 +18,8 @@ https://user-images.githubusercontent.com/41961280/122515860-5179fa00-d00e-11eb-
 - Expand LSP-Snippets with [nvim-compe](https://github.com/hrsh7th/nvim-compe) (or its' successor, [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) (requires [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)))
 - Snippet history (jump back into older snippets)
 - Resolve filetype at the cursor using Treesitter
+
+
 
 # Drawbacks
 - Snippets that make use of the entire functionality of this plugin have to be defined in Lua (but 95% of snippets can be written in LSP-syntax).
