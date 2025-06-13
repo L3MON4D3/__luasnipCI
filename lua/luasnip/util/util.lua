@@ -409,6 +409,15 @@ local function pos_cmp(pos1, pos2)
 	return 2 * cmp(pos1[1], pos2[1]) + cmp(pos1[2], pos2[2])
 end
 
+-- compute offset of `pos` into multiline string starting at `base_pos`.
+-- This is different from pos_sub because here the column-offset starts at zero
+-- when `pos` is on a line different from `base_pos`.
+-- Assumption: `pos` occurs after `base_pos`.
+local function pos_offset(base_pos, pos)
+	local row_offset = pos[1] - base_pos[1]
+	return {row_offset, row_offset == 0 and pos[2] - base_pos[2] or pos[2]}
+end
+
 return {
 	get_cursor_0ind = get_cursor_0ind,
 	set_cursor_0ind = set_cursor_0ind,
@@ -449,6 +458,10 @@ return {
 	indx_of = indx_of,
 	ternary = ternary,
 	pos_cmp = pos_cmp,
+<<<<<<< HEAD
 	validate = validate,
 	str_utf32index = str_utf32index,
+=======
+	pos_offset = pos_offset
+>>>>>>> a6f44a7 (Format with stylua)
 }
