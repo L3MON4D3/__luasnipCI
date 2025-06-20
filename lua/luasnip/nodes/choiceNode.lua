@@ -53,8 +53,8 @@ end
 ---@field restore_cursor boolean? If set, the currently active node is looked up
 ---in the switched-to choice, and the cursor restored to  preserve the current
 ---position relative to that node. The node may be found if a `restoreNode` is
----present in both choice.  
----`false` by default, as enabling might lead to decreased performance.  
+---present in both choice.
+---`false` by default, as enabling might lead to decreased performance.
 ---
 ---It's possible to override the default by wrapping the `choiceNode`
 ---constructor in another function that sets `opts.restore_cursor` to `true` and
