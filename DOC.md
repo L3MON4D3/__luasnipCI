@@ -3896,10 +3896,6 @@ inside a snippet and the current node can be jumped forward from.
 
 #### `locally_jumpable(dir): boolean`
 
-Return whether the cursor is inside a snippet and the current node can be jumped forward from.
-
-* `dir: (1|-1)` Test jumping forwards/backwards.
-
 #### `snip_expand(snippet, opts?): LuaSnip.ExpandedSnippet`
 
 Expand a snippet in the current buffer.
