@@ -287,9 +287,6 @@ function API.expand_or_locally_jumpable()
 	return API.expandable() or (API.in_snippet() and API.jumpable(1))
 end
 
---- Return whether the cursor is inside a snippet and the current node can be
---- jumped forward from.
----@param dir 1|-1 Test jumping forwards/backwards.
 ---@return boolean
 function API.locally_jumpable(dir)
 	return API.in_snippet() and API.jumpable(dir)
